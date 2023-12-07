@@ -31,13 +31,17 @@ Habrá cosas que retocar cosas a mano, pero no debería ser un problemón.
 }
 
 
+img:not(.slide img) {
+  filter: drop-shadow(0 8px 4px rgba(0, 0, 0, 0.7));
+}
 
-  img{
-    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
-  }
+/* Anula la sombra para las imágenes dentro de .slide */
+.slide img {
+  filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+}
 
 p,h1,h2,h3,h4,h5{
-  text-shadow: black 0.1em 0.1em 0.2em
+  text-shadow: black 0.3em 0.35em 0.3em;
 
 }
 
@@ -425,7 +429,7 @@ nav{
 
 .contenido{
   display: flex;
-  width: 25%;
+  width: 30%;
   text-align: center;
   justify-content: center;
   
@@ -675,10 +679,8 @@ text-align: start;
   }
   
   .bolas img{
-    background-color: #FAF7F6;;
     width: 20;
     margin-left: 20px;
-    background-color: var(--color_barra);
   }
   
 .lista_barra{
@@ -1048,7 +1050,7 @@ justify-content:space-around;
 
 .contenido{
   display: flex;
-  width: 25%;
+  width: 30%;
   text-align: center;
   justify-content: center;
   
@@ -1593,7 +1595,7 @@ text-align: start;
   
   .contenido{
     display: flex;
-    width: 25%;
+    width: 30%;
     text-align: center;
     justify-content: center;
     
@@ -2169,7 +2171,7 @@ text-align: start;
 
 .contenido{
   display: flex;
-  width: 25%;
+  width: 30%;
   text-align: center;
   justify-content: center;
   
