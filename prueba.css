@@ -1,0 +1,22 @@
+p{
+    font-size:40px;
+    color: #000000;
+    justify-content: center;
+    text-align: center;
+    background-color: aquamarine;
+    height: 2vw;
+
+}
+
+div{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 200px;
+    padding: 200px;
+    background-color: blue
+}
+
+#enlace{
+    width: 20%;
+}

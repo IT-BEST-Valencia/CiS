@@ -1,3 +1,53 @@
+/* Aquí es desde donde se van cambiar todos los aspectos generales:
+Colores
+imágenes 
+Algunos tamaños de letra
+
+
+Esto son las variables de la web. Cambiando aquí el valor de una, la cambias de golpe para todas las pantallas.
+Habrá cosas que retocar cosas a mano, pero no debería ser un problemón.
+*/
+@media all{
+:root {
+
+  /*Colores*/
+  --color_barra: #186d62;
+  --transpa_inicio: #55ccb899;
+  --degradado1:#185750;
+  --degradado2:#23a994;
+
+
+  --traspa_seccion1:#186d6286 ;
+  --traspa_seccion2:#19887986;
+  --traspa_seccion3:#18494386;
+
+  --separadores_inferiores:#23a994;
+
+/*Imágenes de fondo*/
+  --img_fondo_principal:url(./Imagenes/SPC_CAC.jpeg);
+  --img_seccion1: url(./Imagenes/Puente_flores.jpg);
+  --img_seccion2: url(./Imagenes/Project_work2.jpg);
+  --img_seccion3: url(./Imagenes/Juego_plaza_virgen.JPG);
+}
+
+
+img:not(.slide img) {
+  filter: drop-shadow(0 8px 4px rgba(0, 0, 0, 0.7));
+}
+
+/* Anula la sombra para las imágenes dentro de .slide */
+.slide img {
+  filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+}
+
+p,h1,h2,h3,h4,h5{
+  text-shadow: black 0.3em 0.35em 0.3em;
+
+}
+
+}
+
+
 @media only screen and (min-width:820px){
 html, body {
   margin: 0;
@@ -23,13 +73,21 @@ nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #532161;
+  background-color: var(--color_barra);
   padding-top: 20;
   width: 100%;
   position: fixed;
   z-index: 10000000;
 }
 
+    
+.oculto{
+  display: flex;
+  background-color: var(--color_barra);
+  width: 100%;
+  padding-top: 20;
+  min-height: 75px;
+}
 
 .logo_pequeño img{
   width: 40%;
@@ -50,10 +108,8 @@ nav{
 }
 
 .bolas img{
-  background-color: #FAF7F6;;
   width: 30;
   margin-left: 60px;
-  background-color: #532161;
 }
 
 .lista_barra{
@@ -90,81 +146,82 @@ nav{
 }
 
 .barra_principio{
-  background-image: url(./Imagenes/header.jpg);
+  background-image: var(--img_fondo_principal);
   max-width: 100%;
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 95% ;
-  min-height: 630;
+  height: 85% ;
 }
 
 .transparencia_foto_principio{
   flex-direction: column;
-  justify-content: center;
   padding: 0% 5% 0 5%;
-  background-color: #c04ce043;
+  background-color: var(--transpa_inicio);
   width: 100%;
   height: 100%;
   display: flex;
+  justify-content: space-evenly;
 }
 
 .logo_central{
   display: flex;
-  padding-top: 1%;
   justify-content:space-evenly; /* Centrar horizontalmente */
   align-items: center;
-  margin-top: 8%;
 }
 
 .logo_central img {
-  width: 250;
+  width: 30%;
   height: auto;
-  margin-top: 8%;
 
 }
 
-.logo_central h2{
-  margin-top: 8%;
+.logo_central h2{   
+  width: 45%;
   text-align: center;
-  font-size: 3.5vw;
+  font-size: 5vh;
   font-weight: 100; 
+  text-shadow: black 0.1em 0.1em 0.2em;
+  margin: 0;
 }
 
 .Temporizador{
-  height: 11%;
   display: flex;
+  justify-content:space-around;
+}
+
+#contador{
+  display: flex;
+  text-align: center;
   justify-content: center;
 }
 
-
 .Temporizador h2{
+  margin: 0;
+  text-align: center;
   display: flex;
-  justify-content: space-around;
   font-size: 45;
   color: white;
   font-weight: 100; 
 }
 
+.contador{
+  text-align: center;
+}
 .fecha{
   display: flex;
   justify-content: center;
-  padding-left: 90;
 }
 
-.frase{
-  margin-top: 1%;
-}
 
 .frase p{
   color: #FAF7F6;
   text-align: center;
-  font-size: 30;
+  font-size: 15vh;
   font-weight: 100;
-  margin-left: 0;
-  margin-top: 3%;
-
+  margin:0;
 }
 
 #separador_inicio{
@@ -173,13 +230,7 @@ nav{
 }
 
 
-.descripcion{
-  display: flex;
-  justify-content: center;
-  background:  linear-gradient(to bottom,#48095d, #996AA6);
-  
 
-}
 
 #separador_desc{
   padding-bottom: 30;
@@ -190,11 +241,11 @@ nav{
 .competiciones{
   display: flex;
   justify-content: center;
+  text-align: center;
   font-size: 30;
   font-weight: 100;
-  background: linear-gradient(to bottom,#996AA6,#48095d);
+  background: linear-gradient(to bottom, var(--degradado1),var(--degradado2));
 }
-
 #separador_comp{
   background-color:  #FAF7F6;
   padding-bottom: 5;
@@ -202,16 +253,16 @@ nav{
 
 
 .caja_competicion1{
-  background-image: url(./Imagenes/hemisferic.jpg);
+  background-image: var(--img_seccion1);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 40%;
+  height: 50%;
 }
 
 .transparencia_competicion1{
-  background-color: #996aa691;
+  background-color: var(--traspa_seccion1);
   width: 100%;
   height: 100%;
   display: flex;
@@ -246,18 +297,18 @@ nav{
 }
 
 .caja_competicion2{
-  background-image: url(./Imagenes/gente1.jpg);
+  background-image: var(--img_seccion2);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  height: 40%;
+  height: 50%;
   overflow: hidden;
 }
 
 .transparencia_competicion2{
-  background-color: #c04ce098;
+  background-color:var(--traspa_seccion2);
   width: 100%;
   height: 100%;
   display: flex;
@@ -287,18 +338,18 @@ nav{
 
 
 .caja_competicion3{
-  background-image: url(./Imagenes/gente2.jpeg);
+  background-image: var(--img_seccion3);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 45%;
+  height: 50%;
   overflow: hidden;
 }
 
 .transparencia_competicion3{
-  background-color: #996aa691;
+  background-color: var(--traspa_seccion3);
   width: 100%;
   height: 100%;
   display: flex;
@@ -318,6 +369,7 @@ nav{
   padding-top: 20px;
   width: 18%;
   
+  
 }
 
 .competicion3 p{
@@ -328,7 +380,8 @@ nav{
 }
 
 #separador_desc{
-  background-color: #803395 ;
+  background-color: var(--separadores_inferiores);
+  justify-content: center; text-align: center; padding: 20; ;
 }
 
 .end{
@@ -371,7 +424,7 @@ nav{
 
 .contenido{
   display: flex;
-  width: 25%;
+  width: 30%;
   text-align: center;
   justify-content: center;
   
@@ -575,13 +628,22 @@ text-align: start;
   
   nav{
       display: flex;
-      background-color: #532161;
+      background-color: var(--color_barra);
       position: fixed;
       height: 15.5%;
       width: 100%;
       z-index: 10000000000;
       justify-content: space-between;
   }
+
+
+  .oculto{
+    display: flex;
+    background-color: var(--color_barra);
+    height: 15.5%;
+    width: 100%;
+    justify-content: space-between;
+}
 
 
   .logo_pequeño{
@@ -612,10 +674,8 @@ text-align: start;
   }
   
   .bolas img{
-    background-color: #FAF7F6;;
     width: 20;
     margin-left: 20px;
-    background-color: #532161;
   }
   
 .lista_barra{
@@ -651,19 +711,18 @@ text-align: start;
 }
 
 .barra_principio{
-  margin-top: 18%;
-  background-image: url(./Imagenes/header.jpg);
+  background-image: var(--img_fondo_principal);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 90%;
+  height: 84.5%;
 }
 
 .transparencia_foto_principio{
 flex-direction: column;
-justify-content: center;
-background-color: #c04ce043;
+justify-content: space-evenly;
+background-color: var(--transpa_inicio);
 width: 100%;
 height: 100%;
 display: flex;
@@ -683,7 +742,6 @@ flex-direction: column;
 width: 40%;
 height: auto;
 display: flex;
-margin-top: 15%;
 }
 
 .logo_central h2{
@@ -712,14 +770,16 @@ font-weight: 100;
 
 .fecha{
 display: flex;
-justify-content: end;
+justify-content: center;
 }
 
 .frase p{
 color: #FAF7F6;
 text-align: center;
-font-size: 30;
-font-weight: 100;margin-left: 0;
+margin: 5% 0 5% 0;
+font-size: 7.5vh;
+font-weight: 100;
+
 }
 
 
@@ -730,17 +790,6 @@ padding-bottom: 15;
 }
 
 
-.descripcion{
-display: flex;
-justify-content: center;
-background:  linear-gradient(to bottom,#48095d, #996AA6);
-padding-bottom: 50px;
-}
-
-.descripcion h3{
-font-size: 1.5vmax;
-text-align: center;
-}
 
 #separador_desc{
 padding-bottom: 20;
@@ -749,11 +798,12 @@ background-color: #FAF7F6;
 
 
 .competiciones{
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 font-size: 30;
 font-weight: 100;
-background:  linear-gradient(to bottom, #996AA6,#48095d);
+background: linear-gradient(to bottom, var(--degradado1),var(--degradado2));
 }
 
 #separador_comp{
@@ -765,7 +815,7 @@ padding-bottom: 5;
 
 
 .caja_competicion1{
-background-image: url(./Imagenes/hemisferic.jpg);
+  background-image: var(--img_seccion1);
 background-attachment: fixed;
 background-size: cover;
 background-repeat: no-repeat;
@@ -775,7 +825,7 @@ position: relative;
 }
 
 .transparencia_competicion1{
-background-color: #996aa691;
+  background-color: var(--traspa_seccion1);
 width: 100%;
 height: 100%;
 display: flex;
@@ -816,9 +866,10 @@ background-color: #FAF7F6;
 }
 
 .caja_competicion2{
-  background-image: url(./Imagenes/gente1.jpg);
+  background-image: var(--img_seccion2);
 background-attachment: fixed;
 background-size: cover;
+background-position: center;
 background-repeat: no-repeat;
 width: 100%;
 height: 50%;
@@ -826,7 +877,7 @@ overflow: hidden;
 }
 
 .transparencia_competicion2{
-background-color: #c04ce098;
+  background-color:var(--traspa_seccion2);
 width: 100%;
 height: 100%;
 display: flex;
@@ -858,7 +909,7 @@ font-size: 1.45vmax;
 }
 
 .caja_competicion3{
-background-image: url(./Imagenes/gente2.jpeg);
+  background-image: var(--img_seccion3);
 background-attachment: fixed;
 background-position: center;
 background-size: cover;
@@ -869,7 +920,7 @@ position: relative;
 }
 
 .transparencia_competicion3{
-background-color: #996aa691;
+  background-color: var(--traspa_seccion3);
 width: 100%;
 height: 100%;
 display: flex;
@@ -940,10 +991,11 @@ content: ""; /* Pseudo-elemento para duplicar las Imagenes */
 width: 250px;
 }
 
-
 #separador_desc{
-background-color: #803395 ;
+  background-color: var(--separadores_inferiores);
+  justify-content: center; text-align: center; padding: 20; ;
 }
+
 
 
 .end{
@@ -995,7 +1047,7 @@ justify-content:space-around;
 
 .contenido{
   display: flex;
-  width: 25%;
+  width: 30%;
   text-align: center;
   justify-content: center;
   
@@ -1153,13 +1205,24 @@ text-align: start;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #532161;
+    background-color: var(--color_barra);
     width: 100%;
     height: 18%;
+    max-height: 150;
     position: fixed;
     z-index: 10000000;
   }
   
+  .oculto{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color_barra);
+    width: 100%;
+    height: 18%;
+    max-height: 150;
+  }
+
   
   .logo_pequeño img{
     width: 40%;
@@ -1180,10 +1243,8 @@ text-align: start;
   }
   
   .bolas img{
-    background-color: #FAF7F6;;
     width: 20;
     margin-left: 20px;
-    background-color: #532161;
   }
   
   .lista_barra{
@@ -1209,20 +1270,20 @@ text-align: start;
   
   
   .barra_principio{
-    background-image: url(./Imagenes/header.jpg);
+    background-image: var(--img_fondo_principal);
     max-width: 100%;
     background-attachment: fixed;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 95% ;
-    min-height: 580;
+    height: 90% ;
   }
   
   .transparencia_foto_principio{
     flex-direction: column;
     justify-content: center;
-    background-color: #c04ce043;
+    background-color: var(--transpa_inicio);
     width: 100%;
     height: 100%;
     display: flex;
@@ -1231,12 +1292,11 @@ text-align: start;
   .logo_central{
     display: flex;
     align-items: center;
-    margin-top: 12.5%;
     justify-content:space-evenly; /* Centrar horizontalmente */
   }
   
   .logo_central img {
-    width: 200;
+    width: 33%;
     height: auto;
   
   }
@@ -1249,7 +1309,8 @@ text-align: start;
   
   .Temporizador{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+
   }
   
   .Temporizador h2{
@@ -1258,26 +1319,22 @@ text-align: start;
     font-size: 30;
     color: white;
     font-weight: 100; 
+    text-align: center;
+    width: 45%;
   }
   
   .fecha{
     display: flex;
     justify-content: center;
-    margin-left: 10%;
   }
   
-  .frase{
-    margin-top: 1%;
-  }
   
   .frase p{
     color: #FAF7F6;
     text-align: center;
-    font-size: 30;
+    font-size: 15vw;
     font-weight: 100;
-    margin-left: 0;
-    margin-top: 3%;
-  
+    margin: 2%;
   }
   
   #separador_inicio{
@@ -1286,18 +1343,6 @@ text-align: start;
   }
   
   
-  .descripcion{
-    display: flex;
-    justify-content: center;
-    background:  linear-gradient(to bottom,#48095d, #996AA6);
-  }
-  
-  .descripcion h3{
-    width: 70%;
-    font-size: 2.35vmax;
-    text-align: justify;
-    padding-bottom: 40px;
-    }
 
   #separador_desc{
     padding-bottom: 30;
@@ -1308,9 +1353,10 @@ text-align: start;
   .competiciones{
     display: flex;
     justify-content: center;
+    text-align: center;
     font-size: 30;
     font-weight: 100;
-    background:  linear-gradient(to bottom, #996AA6,#48095d);
+    background: linear-gradient(to bottom, var(--degradado1),var(--degradado2));
   }
   
   #separador_comp{
@@ -1320,7 +1366,7 @@ text-align: start;
   
   
   .caja_competicion1{
-    background-image: url(./Imagenes/hemisferic.jpg);
+    background-image: var(--img_seccion1);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1329,7 +1375,7 @@ text-align: start;
   }
   
   .transparencia_competicion1{
-    background-color: #996aa691;
+    background-color: var(--traspa_seccion1);
     width: 100%;
     height: 100%;
     display: flex;
@@ -1363,7 +1409,7 @@ text-align: start;
   }
   
   .caja_competicion2{
-    background-image: url(./Imagenes/gente1.jpg);
+    background-image: var(--img_seccion2);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -1374,7 +1420,7 @@ text-align: start;
   }
   
   .transparencia_competicion2{
-    background-color: #c04ce098;
+    background-color:var(--traspa_seccion2);
     width: 100%;
     height: 100%;
     display: flex;
@@ -1404,7 +1450,7 @@ text-align: start;
   
   
   .caja_competicion3{
-    background-image: url(./Imagenes/gente2.jpeg);
+    background-image: var(--img_seccion3);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -1415,7 +1461,7 @@ text-align: start;
   }
   
   .transparencia_competicion3{
-    background-color: #996aa691;
+    background-color: var(--traspa_seccion3);
     width: 100%;
     height: 100%;
     display: flex;
@@ -1443,8 +1489,11 @@ text-align: start;
   }
   
   #separador_desc{
-    background-color: #803395 ;
+    background-color: var(--separadores_inferiores);
+    justify-content: center; text-align: center; padding: 20; ;
   }
+  
+  
   
   .end{
     display: flex;
@@ -1538,7 +1587,7 @@ text-align: start;
   
   .contenido{
     display: flex;
-    width: 25%;
+    width: 30%;
     text-align: center;
     justify-content: center;
     
@@ -1699,13 +1748,22 @@ text-align: start;
     
     nav{
         display: flex;
-        background-color: #532161;
+        background-color: var(--color_barra);
         position: fixed;
         height: 17.5%;
         width: 100%;
         z-index: 10000000000;
     }
   
+
+
+        
+    .oculto{
+      display: flex;
+      background-color: var(--color_barra);
+      height: 17.5%;
+      width: 100%;
+  }
   
     .logo_pequeño{
       display: flex;
@@ -1735,10 +1793,8 @@ text-align: start;
     }
     
     .bolas img{
-      background-color: #FAF7F6;;
       width: 20;
       margin-left: 20px;
-      background-color: #532161;
     }
     
   .lista_barra{
@@ -1774,19 +1830,18 @@ text-align: start;
   }
   
   .barra_principio{
-    margin-top: 17.5%;
-    background-image: url(./Imagenes/header.jpg);
+    background-image: var(--img_fondo_principal);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 90%;
+    height: 82.5%;
   }
   
   .transparencia_foto_principio{
   flex-direction: column;
-  justify-content: center;
-  background-color: #c04ce043;
+  justify-content: space-evenly;
+  background-color: var(--transpa_inicio);
   width: 100%;
   height: 100%;
   display: flex;
@@ -1811,7 +1866,7 @@ text-align: start;
   
   .logo_central h2{
   display: flex;
-  margin-top: 3%;
+  margin: 3% 0 3% 0;
   text-align: center;
   font-size: 4.5vh;
   font-weight: 100; 
@@ -1829,15 +1884,12 @@ text-align: start;
   }
   .Temporizador h2{
   display: flex;
-  margin-top: 3.5%;
   justify-content: center;
   font-size: 6vh;
   color: white;
-  max-height: 75%;
   margin: 0;
-  margin-bottom: 6%;
   font-weight: 100; 
-  margin-block-start: 0.83  em;
+  margin-block-start: 0.83em;
   }
   
   .fecha{
@@ -1848,7 +1900,7 @@ text-align: start;
   .frase p{
   color: #FAF7F6;
   text-align: center;
-  font-size: 20;
+  font-size: 8vw;
   margin: 0;
   font-weight: 100;margin-left: 0;
   }
@@ -1861,17 +1913,6 @@ text-align: start;
   }
   
   
-  .descripcion{
-  display: flex;
-  justify-content: center;
-  background:  linear-gradient(to bottom,#48095d, #996AA6);
-  }
-  
-  .descripcion h3{
-  font-size: 2.5vmax;
-  text-align: center;
-  }
-  
   #separador_desc{
   padding-bottom: 20;
   background-color: #FAF7F6;
@@ -1879,11 +1920,12 @@ text-align: start;
   
   
   .competiciones{
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
   font-size: 25;
   font-weight: 100;
-  background:  linear-gradient(to bottom, #996AA6,#48095d);
+  background: linear-gradient(to bottom, var(--degradado1),var(--degradado2));
   }
   
   #separador_comp{
@@ -1895,7 +1937,7 @@ text-align: start;
   
   
   .caja_competicion1{
-  background-image: url(./Imagenes/hemisferic.jpg);
+    background-image: var(--img_seccion1);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1905,7 +1947,7 @@ text-align: start;
   }
   
   .transparencia_competicion1{
-  background-color: #996aa691;
+    background-color: var(--traspa_seccion1);
   width: 100%;
   height: 100%;
   display: flex;
@@ -1946,7 +1988,7 @@ text-align: start;
   }
   
   .caja_competicion2{
-  background-image: url(./Imagenes/gente1.jpg);
+    background-image: var(--img_seccion2);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -1957,7 +1999,7 @@ text-align: start;
   }
   
   .transparencia_competicion2{
-  background-color: #c04ce098;
+    background-color:var(--traspa_seccion2);
   width: 100%;
   height: 100%;
   display: flex;
@@ -1990,7 +2032,7 @@ text-align: start;
   }
   
   .caja_competicion3{
-  background-image: url(./Imagenes/gente2.jpeg);
+    background-image: var(--img_seccion3);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -2001,7 +2043,7 @@ text-align: start;
   }
   
   .transparencia_competicion3{
-  background-color: #996aa691;
+    background-color: var(--traspa_seccion3);
   width: 100%;
   height: 100%;
   display: flex;
@@ -2071,10 +2113,11 @@ text-align: start;
   width: 250px;
   }
   
-  
   #separador_desc{
-  background-color: #803395 ;
+    background-color: var(--separadores_inferiores);
+    justify-content: center; text-align: center; padding: 20; ;
   }
+  
   
 
 
@@ -2117,7 +2160,7 @@ text-align: start;
 
 .contenido{
   display: flex;
-  width: 25%;
+  width: 30%;
   text-align: center;
   justify-content: center;
   
@@ -2278,7 +2321,7 @@ text-align: start;
     
     nav{
         display: flex;
-        background-color: #532161;
+        background-color: var(--color_barra);
         position: fixed;
         height: 22.5%;
         width: 100%;
@@ -2286,6 +2329,19 @@ text-align: start;
         min-height: 75px;
     }
   
+
+
+    
+    .oculto{
+      display: flex;
+      background-color: var(--color_barra);
+      height: 22.5%;
+      width: 100%;
+      z-index: 10000000000;
+      min-height: 75px;
+  }
+
+
   
     .logo_pequeño{
       display: flex;
@@ -2314,9 +2370,7 @@ text-align: start;
     }
     
     .bolas img{
-      background-color: #FAF7F6;;
       width: 20;
-      background-color: #532161;
     }
     
   .lista_barra{
@@ -2352,17 +2406,16 @@ text-align: start;
   }
   
   .barra_principio{
-    margin-top: 12.5%;
-    background-image: url(./Imagenes/header.jpg);
+    background-image: var(--img_fondo_principal);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 90%;
+    height: 77.5%;
   }
   
   .transparencia_foto_principio{
-  background-color: #c04ce043;
+    background-color: var(--transpa_inicio);
   width: 100%;
   height: 100%;
   display: flex;
@@ -2377,7 +2430,7 @@ text-align: start;
   }
   
   .logo_central img {
-  width: 20%;
+  width: 30%;
   height: auto;
   display: flex;
   margin: 0;
@@ -2386,7 +2439,7 @@ text-align: start;
   .logo_central h2{
   display: flex;
   text-align: center;
-  font-size: 7vw;
+  font-size: 3.5vw;
   font-weight: 100; 
   
   }
@@ -2396,6 +2449,8 @@ text-align: start;
   flex-direction: row;
   width: 80%;
   padding: 4% 0 4% 0;
+  align-items: center;
+  justify-content: space-evenly;
   }
   
   .Temporizador h2{
@@ -2426,7 +2481,7 @@ text-align: start;
   .frase p{
   color: #FAF7F6;
   text-align: center;
-  font-size: 20;
+  font-size: 8vw;
   margin: 0;
   font-weight: 100;margin-left: 0;
   }
@@ -2438,18 +2493,6 @@ text-align: start;
   padding-bottom: 15;
   }
   
-  
-  .descripcion{
-  display: flex;
-  justify-content: center;
-  background:  linear-gradient(to bottom,#48095d, #996AA6);
-  }
-  
-  .descripcion h3{
-  font-size: 2.5vmax;
-  text-align: center;
-  }
-  
   #separador_desc{
   padding-bottom: 20;
   background-color: #FAF7F6;
@@ -2457,11 +2500,12 @@ text-align: start;
   
   
   .competiciones{
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
   font-size: 25;
   font-weight: 100;
-  background:  linear-gradient(to bottom, #996AA6#48095d);
+  background: linear-gradient(to bottom, var(--degradado1),var(--degradado2));
   }
   
   #separador_comp{
@@ -2473,7 +2517,7 @@ text-align: start;
   
   
   .caja_competicion1{
-  background-image: url(./Imagenes/hemisferic.jpg);
+    background-image: var(--img_seccion1);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2483,7 +2527,7 @@ text-align: start;
   }
   
   .transparencia_competicion1{
-  background-color: #996aa691;
+    background-color: var(--traspa_seccion1);
   width: 100%;
   height: 100%;
   display: flex;
@@ -2524,7 +2568,7 @@ text-align: start;
   }
   
   .caja_competicion2{
-  background-image: url(./Imagenes/gente1.jpg);
+    background-image: var(--img_seccion2);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2535,7 +2579,7 @@ text-align: start;
   }
   
   .transparencia_competicion2{
-  background-color: #c04ce098;
+    background-color:var(--traspa_seccion2);
   width: 100%;
   height: 100%;
   display: flex;
@@ -2568,7 +2612,7 @@ text-align: start;
   }
   
   .caja_competicion3{
-  background-image: url(./Imagenes/gente2.jpeg);
+    background-image: var(--img_seccion3);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2579,7 +2623,7 @@ text-align: start;
   }
   
   .transparencia_competicion3{
-  background-color: #996aa691;
+    background-color: var(--traspa_seccion3);
   width: 100%;
   height: 100%;
   display: flex;
@@ -2650,7 +2694,8 @@ text-align: start;
   
   
   #separador_desc{
-  background-color: #803395 ;
+    background-color: var(--separadores_inferiores);
+    justify-content: center; text-align: center; padding: 20; ;
   }
   
   
