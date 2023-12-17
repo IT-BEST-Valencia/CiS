@@ -11,17 +11,17 @@ Habrá cosas que retocar cosas a mano, pero no debería ser un problemón.
 :root {
 
   /*Colores*/
-  --color_barra: rgb(83, 122, 127);
-  --transpa_inicio: rgba(85, 204, 184, 0.462);
-  --degradado1:rgb(34, 172, 200);
-  --degradado2:rgb(23, 184, 155);
+  --color_barra: #186d62;
+  --transpa_inicio: #55ccb899;
+  --degradado1:#185750;
+  --degradado2:#23a994;
 
 
-  --traspa_seccion1:rgba(83, 122, 127, 0.689);
-  --traspa_seccion2:rgba(85, 204, 184, 0.596);
-  --traspa_seccion3:rgba(105, 181, 191, 0.689);
+  --traspa_seccion1:#186d6286 ;
+  --traspa_seccion2:#19887986;
+  --traspa_seccion3:#18494386;
 
-  --separadores_inferiores:rgb(27, 140, 144);
+  --separadores_inferiores:#23a994;
 
 /*Imágenes de fondo*/
   --img_fondo_principal:url(./Imagenes/SPC_CAC.jpeg);
@@ -158,24 +158,22 @@ nav{
 
 .transparencia_foto_principio{
   flex-direction: column;
-  justify-content: center;
   padding: 0% 5% 0 5%;
   background-color: var(--transpa_inicio);
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .logo_central{
-  padding: 3%;
   display: flex;
   justify-content:space-evenly; /* Centrar horizontalmente */
   align-items: center;
 }
 
 .logo_central img {
-  width: 45%;
+  width: 30%;
   height: auto;
 
 }
@@ -183,13 +181,13 @@ nav{
 .logo_central h2{   
   width: 45%;
   text-align: center;
-  font-size: 3.5vw;
+  font-size: 5vh;
   font-weight: 100; 
-  text-shadow: black 0.1em 0.1em 0.2em
+  text-shadow: black 0.1em 0.1em 0.2em;
+  margin: 0;
 }
 
 .Temporizador{
-  padding: 3%;
   display: flex;
   justify-content:space-around;
 }
@@ -207,7 +205,6 @@ nav{
   font-size: 45;
   color: white;
   font-weight: 100; 
-  width: 500px;
 }
 
 .contador{
@@ -222,11 +219,9 @@ nav{
 .frase p{
   color: #FAF7F6;
   text-align: center;
-  font-size: 30;
+  font-size: 15vh;
   font-weight: 100;
-  padding: 3%;
-  
-
+  margin:0;
 }
 
 #separador_inicio{
@@ -721,12 +716,12 @@ text-align: start;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 90%;
+  height: 84.5%;
 }
 
 .transparencia_foto_principio{
 flex-direction: column;
-justify-content: center;
+justify-content: space-evenly;
 background-color: var(--transpa_inicio);
 width: 100%;
 height: 100%;
@@ -775,14 +770,16 @@ font-weight: 100;
 
 .fecha{
 display: flex;
-justify-content: end;
+justify-content: center;
 }
 
 .frase p{
 color: #FAF7F6;
 text-align: center;
-font-size: 30;
-font-weight: 100;margin-left: 0;
+margin: 5% 0 5% 0;
+font-size: 7.5vh;
+font-weight: 100;
+
 }
 
 
@@ -1280,8 +1277,7 @@ text-align: start;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 95% ;
-    min-height: 580;
+    height: 90% ;
   }
   
   .transparencia_foto_principio{
@@ -1296,12 +1292,11 @@ text-align: start;
   .logo_central{
     display: flex;
     align-items: center;
-    margin-top: 12.5%;
     justify-content:space-evenly; /* Centrar horizontalmente */
   }
   
   .logo_central img {
-    width: 200;
+    width: 33%;
     height: auto;
   
   }
@@ -1314,7 +1309,8 @@ text-align: start;
   
   .Temporizador{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+
   }
   
   .Temporizador h2{
@@ -1323,26 +1319,22 @@ text-align: start;
     font-size: 30;
     color: white;
     font-weight: 100; 
+    text-align: center;
+    width: 45%;
   }
   
   .fecha{
     display: flex;
     justify-content: center;
-    margin-left: 10%;
   }
   
-  .frase{
-    margin-top: 1%;
-  }
   
   .frase p{
     color: #FAF7F6;
     text-align: center;
-    font-size: 30;
+    font-size: 15vw;
     font-weight: 100;
-    margin-left: 0;
-    margin-top: 3%;
-  
+    margin: 2%;
   }
   
   #separador_inicio{
@@ -1843,12 +1835,12 @@ text-align: start;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 90%;
+    height: 82.5%;
   }
   
   .transparencia_foto_principio{
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   background-color: var(--transpa_inicio);
   width: 100%;
   height: 100%;
@@ -1874,7 +1866,7 @@ text-align: start;
   
   .logo_central h2{
   display: flex;
-  margin-top: 3%;
+  margin: 3% 0 3% 0;
   text-align: center;
   font-size: 4.5vh;
   font-weight: 100; 
@@ -1892,15 +1884,12 @@ text-align: start;
   }
   .Temporizador h2{
   display: flex;
-  margin-top: 3.5%;
   justify-content: center;
   font-size: 6vh;
   color: white;
-  max-height: 75%;
   margin: 0;
-  margin-bottom: 6%;
   font-weight: 100; 
-  margin-block-start: 0.83  em;
+  margin-block-start: 0.83em;
   }
   
   .fecha{
@@ -1911,7 +1900,7 @@ text-align: start;
   .frase p{
   color: #FAF7F6;
   text-align: center;
-  font-size: 20;
+  font-size: 8vw;
   margin: 0;
   font-weight: 100;margin-left: 0;
   }
@@ -2422,7 +2411,7 @@ text-align: start;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 90%;
+    height: 77.5%;
   }
   
   .transparencia_foto_principio{
@@ -2441,7 +2430,7 @@ text-align: start;
   }
   
   .logo_central img {
-  width: 20%;
+  width: 30%;
   height: auto;
   display: flex;
   margin: 0;
@@ -2450,7 +2439,7 @@ text-align: start;
   .logo_central h2{
   display: flex;
   text-align: center;
-  font-size: 7vw;
+  font-size: 3.5vw;
   font-weight: 100; 
   
   }
@@ -2460,6 +2449,8 @@ text-align: start;
   flex-direction: row;
   width: 80%;
   padding: 4% 0 4% 0;
+  align-items: center;
+  justify-content: space-evenly;
   }
   
   .Temporizador h2{
@@ -2490,7 +2481,7 @@ text-align: start;
   .frase p{
   color: #FAF7F6;
   text-align: center;
-  font-size: 20;
+  font-size: 8vw;
   margin: 0;
   font-weight: 100;margin-left: 0;
   }
