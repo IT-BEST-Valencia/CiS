@@ -7,45 +7,57 @@ Algunos tamaños de letra
 Esto son las variables de la web. Cambiando aquí el valor de una, la cambias de golpe para todas las pantallas.
 Habrá cosas que retocar cosas a mano, pero no debería ser un problemón.
 */
+
+@font-face {
+  font-family: 'Star Wars';
+  src: url('Fuentes/StarJediRounded-jW3R.ttf') format('ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+
 @media all{
 :root {
 
   /*Colores*/
-  --color_barra: #186d62;
-  --transpa_inicio: #55ccb899;
-  --degradado1:#185750;
-  --degradado2:#23a994;
+  --color_barra: #1C1C22;
+  --transpa_inicio: #2C2C3899;
+  --degradado2:#22BA1A;
+  --degradado1:#167A11;
 
 
-  --traspa_seccion1:#186d6286 ;
-  --traspa_seccion2:#19887986;
-  --traspa_seccion3:#18494386;
+  --traspa_seccion1:#48495cc8 ;
+  --traspa_seccion2:#373843c8;
+  --traspa_seccion3:#6e7189c8;
 
-  --separadores_inferiores:#23a994;
+  --separadores_inferiores:#48495c;
 
 /*Imágenes de fondo*/
-  --img_fondo_principal:url(./Imagenes/SPC_CAC.jpeg);
+  --img_fondo_principal:url(./Imagenes/fondo_estrellas.jpg);
   --img_seccion1: url(./Imagenes/Puente_flores.jpg);
   --img_seccion2: url(./Imagenes/Project_work2.jpg);
   --img_seccion3: url(./Imagenes/Juego_plaza_virgen.JPG);
 }
 
 
-img:not(.slide img) {
-  filter: drop-shadow(0 8px 4px rgba(0, 0, 0, 0.7));
+/* img:not(.slide img) {
+  filter: drop-shadow(0px 0px 0px #cc6ce6a1);
 }
 
-/* Anula la sombra para las imágenes dentro de .slide */
+/* Anula la sombra para las imágenes dentro de .slide 
 .slide img {
   filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+} */
+
+h1,h2,h3,h4,h5{
+  font-family: 'Star Wars', sans-serif;
+  color: #FAF7F6;
 }
 
-p,h1,h2,h3,h4,h5{
-  text-shadow: black 0.3em 0.35em 0.3em;
 
 }
 
-}
+
 
 
 @media only screen and (min-width:820px){
@@ -56,17 +68,6 @@ html, body {
   height: 100%;
 }
 
-
-
-p{
-  font-family: 'Open Sans', sans-serif;
-  color: #FAF7F6;
-}
-
-h1,h2,h3,h4,h5,h6{
-  font-family: 'Aileron Regular', sans-serif;
-  color: #FAF7F6;
-}
 
 
 nav{
@@ -88,6 +89,8 @@ nav{
   padding-top: 20;
   min-height: 75px;
 }
+
+
 
 .logo_pequeño img{
   width: 40%;
@@ -122,6 +125,8 @@ nav{
   white-space: nowrap;
   font-size: 20;
   align-items: center;
+  text-shadow: black 0em 0em 0.3em;
+  color: #FFE81F;
 }
 
 .lista_barra a{
@@ -159,7 +164,7 @@ nav{
 .transparencia_foto_principio{
   flex-direction: column;
   padding: 0% 5% 0 5%;
-  background-color: var(--transpa_inicio);
+  background: linear-gradient(to bottom,#234db84b,#eb212e51);
   width: 100%;
   height: 100%;
   display: flex;
@@ -168,23 +173,32 @@ nav{
 
 .logo_central{
   display: flex;
-  justify-content:space-evenly; /* Centrar horizontalmente */
+  justify-content:space-between; /* Centrar horizontalmente */
   align-items: center;
+  
+  
 }
 
-.logo_central img {
-  width: 30%;
-  height: auto;
-
+.logo_central div{
+  display: flex;
+  width: 33%;
+  justify-content: center;
 }
+
+#view_blanco{
+  width: 70%;
+  filter: drop-shadow(0 0px 10px #000000);
+}
+
 
 .logo_central h2{   
-  width: 45%;
+  width: 33%;
   text-align: center;
   font-size: 5vh;
   font-weight: 100; 
-  text-shadow: black 0.1em 0.1em 0.2em;
   margin: 0;
+  /* text-shadow:drop-shadow(0 0px 19px #234DB8) */
+  text-shadow: 0 0 20px black;
 }
 
 .Temporizador{
@@ -196,6 +210,7 @@ nav{
   display: flex;
   text-align: center;
   justify-content: center;
+  text-shadow: 0 0 20px black;
 }
 
 .Temporizador h2{
@@ -203,7 +218,6 @@ nav{
   text-align: center;
   display: flex;
   font-size: 45;
-  color: white;
   font-weight: 100; 
 }
 
@@ -216,12 +230,21 @@ nav{
 }
 
 
-.frase p{
-  color: #FAF7F6;
+/* .frase h2{
+  /* color: #FAF7F6; *//* 
+  
   text-align: center;
   font-size: 15vh;
   font-weight: 100;
   margin:0;
+} */
+
+.frase{
+  display: flex;
+  justify-content: center;
+}
+.frase img{
+  width: 65%;
 }
 
 #separador_inicio{
@@ -244,10 +267,10 @@ nav{
   text-align: center;
   font-size: 30;
   font-weight: 100;
-  background: linear-gradient(to bottom, var(--degradado1),var(--degradado2));
+  background: linear-gradient(to bottom, #532161,#c04ce09d,#bd7ccf7a,#c04ce09d,#532161);
 }
 #separador_comp{
-  background-color:  #FAF7F6;
+  background-color: var(--color_barra);
   padding-bottom: 5;
 }
 
@@ -291,10 +314,19 @@ nav{
   font-size: 1.3vmax;
 }
 
-#separador_competiciones{
-  width: 10%;
-  background-color: #FAF7F6;
+.separador_sw{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 5px;
+  /* background: linear-gradient(to bottom, #22BA1A  ,#6bb667,#b6d4b4,#6bb667  ,#22BA1A  );} */
+  background: linear-gradient(to right,#234db8d1,#eb212ed1);
 }
+
+  #separador_2{
+    background: linear-gradient(to left,#234db8d1,#eb212ed1);
+  }
+
 
 .caja_competicion2{
   background-image: var(--img_seccion2);
@@ -747,7 +779,7 @@ display: flex;
 .logo_central h2{
 display: flex;
 text-align: center;
-font-size: 3.s5vh;
+font-size: 3.5vh;
 font-weight: 100; 
 width: fit-content;
 flex-direction: column;
@@ -773,16 +805,13 @@ display: flex;
 justify-content: center;
 }
 
-.frase p{
-color: #FAF7F6;
+.frase h2{
 text-align: center;
 margin: 5% 0 5% 0;
 font-size: 7.5vh;
 font-weight: 100;
 
 }
-
-
 
 #separador_inicio{
 color: inherit;
@@ -793,7 +822,7 @@ padding-bottom: 15;
 
 #separador_desc{
 padding-bottom: 20;
-background-color: #FAF7F6;
+background-color: var(--color_barra);
 }
 
 
@@ -1317,7 +1346,6 @@ text-align: start;
     display: flex;
     justify-content: space-evenly;
     font-size: 30;
-    color: white;
     font-weight: 100; 
     text-align: center;
     width: 45%;
@@ -1329,8 +1357,7 @@ text-align: start;
   }
   
   
-  .frase p{
-    color: #FAF7F6;
+  .frase h2{
     text-align: center;
     font-size: 15vw;
     font-weight: 100;
@@ -1886,7 +1913,6 @@ text-align: start;
   display: flex;
   justify-content: center;
   font-size: 6vh;
-  color: white;
   margin: 0;
   font-weight: 100; 
   margin-block-start: 0.83em;
@@ -1897,8 +1923,7 @@ text-align: start;
   justify-content: end;
   }
   
-  .frase p{
-  color: #FAF7F6;
+  .frase h2{
   text-align: center;
   font-size: 8vw;
   margin: 0;
@@ -2458,7 +2483,6 @@ text-align: start;
   justify-content: center;
   flex-direction: row;
   font-size: 4.6vh;
-  color: white;
   max-height: 100%;
   margin: 0;
   font-weight: 100; 
@@ -2478,9 +2502,7 @@ text-align: start;
   width: 18%;
 }
   
-  .frase p{
-  color: #FAF7F6;
-  text-align: center;
+  .frase h2{  text-align: center;
   font-size: 8vw;
   margin: 0;
   font-weight: 100;margin-left: 0;

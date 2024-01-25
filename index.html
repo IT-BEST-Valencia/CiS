@@ -1,5 +1,5 @@
-<html lang="en">
-<head>
+<html>
+    <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,10 @@
         <link rel="stylesheet" href="./prd.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
-        <link rel="stylesheet" type="text/css" href="./Fuentes/Aileron-Regular.otf"> <!-- En estas dos líneas se incluyen las fuentes usadas-->
+        <link rel="stylesheet" type="text/css" href="./Fuentes/Aileron-Regular.otf">
+        <link rel="stylesheet" type="text/css" href="./Fuentes/StarJedi-DGRW.ttf"> 
+        <link rel="stylesheet" type="text/css" href="./Fuentes/StarJediHollow-A4lL.ttf">
+        <link rel="stylesheet" type="text/css" href="./Fuentes/StarJediRounded-jW3R.ttf"><!-- En estas dos líneas se incluyen las fuentes usadas-->
     </head>
 
     <body id="page-top" data-bs-spy="scroll"data-bs-target="#mainNav" data-bs-offset="56">
@@ -55,17 +58,20 @@
 <div class="barra_principio" id="barra_principio"> <!-- Este es el trozo con la imagen -->
     <div class="transparencia_foto_principio"> <!-- Como no sé hacer la transparencia, he hecho un div que se solape por encima--> 
         <div class="logo_central"> <!--Aquí se incluye todo el trozo central, aunque ponga solo logo -->
-            <img src="./Imagenes/BEST-Courses-Logo.png" alt="Logo de View" id="view_blanco"> <!-- Aquí el logo como tal -->
+
+            <div>
+                <img src="./Imagenes/BEST-Courses-Logo.png" alt="Logo de View" id="view_blanco"> <!-- Aquí el logo como tal -->
+            </div>
 
                 <h2>
-                    Summer Course 2024
+                    <b>Summer Course 2024</b>
                 </h2>
-                <h2 class="fecha">24/06/2024 - 30/06/2024</h2>
+                <h2 class="fecha"><b>24/06/2024 - 30/06/2024</b></h2>
 
             </div>
 
             <div class="frase"> <!-- La frase que aún no sabemos qué escribir-->
-                <p>BIOVENGERS, <br>Assemble</p>
+                    <img src="./Imagenes/titulo.png" alt="">
             </div>
         <div class="Temporizador"> <!-- Aquí tenemos lo del temporizador. Lo siento lo copié del chat, no sé Java-->
             <h2 id="contador"></h2>
@@ -78,7 +84,7 @@
 </div>  
 
 <div class="competiciones">
-     <p>Ligera descripción del curso,<br> pero no muy larga</p> <!-- El trozo del título de competiciones. No sé qué hacer aquí la verdad-->
+     <p>Ligera descripción del curso,<br> pero no muy larga</p> 
 </div>
 
 <div class="separador" id="separador_comp"><!-- ª -->
@@ -88,7 +94,7 @@
 <div class="caja_competicion1"> 
     <div class="transparencia_competicion1"> <!-- Las transparencias-->
         <div class="competicion1">
-            <img src="./Imagenes/Hemispheric_bonito.JPG" alt="Logo de View" id="view_blanco"> <!-- Por un lado la foto y por otro el texto-->
+            <img src="./Imagenes/Hemispheric_bonito.JPG"> <!-- Por un lado la foto y por otro el texto-->
         <div class="separador" id="separador_competiciones"></div>
         <p><b>Aquí ya sí deberíamos explayarnos con qué es el curso y cómo va dirigida la pesca</b> </p>
     </div>
@@ -98,24 +104,38 @@
 <div class="separador" id="separador_comp"> <!-- Separador y repetimos otras dos veces-->
 </div>
 
+<div class="separador_sw">
+</div>
+
+<div class="separador" id="separador_comp"><!-- ª -->
+</div>  
+
 <div class="caja_competicion2">
     <div class="transparencia_competicion2">
         <div class="competicion2">
         <p><b>Pondría un poco por dónde van los tiros de las clases y del topic.</b> </p>
         
         <div class="separador" id="separador_competiciones"></div>
-            <img src="./Imagenes/Project_work1.jpg" alt="Logo de View" id="view_blanco">
+            <img src="./Imagenes/Project_work1.jpg">
     </div>
 </div>
 </div>
 
-<div class="separador" id="separador_comp">
+<div class="separador" id="separador_comp"> <!-- Separador y repetimos otras dos veces-->
 </div>
+
+<div class="separador_sw" id="separador_2">
+</div>
+
+<div class="separador" id="separador_comp"><!-- ª -->
+</div>  
+
+
 
 <div class="caja_competicion3">
     <div class="transparencia_competicion3">
         <div class="competicion3">
-            <img src="./Imagenes/IE.jpg" alt="Logo de View" id="view_blanco">
+            <img src="./Imagenes/IE.jpg">
         <div class="separador" id="separador_competiciones"></div>
         <p><b>Contaría algo de cómo serían las actividades sociales, que no todo es matarse a estudiar y eso.</b> </p>
     </div>
@@ -126,8 +146,9 @@
 <div class="separador"id="separador_desc"><h2 style="margin: 0;">Galería de cursos anteriores</h2>
 </div>
 
+
 <!-- Aquí pondremos lo de las slides de las empresas-->
-<div class="Empresas_colaboradoras" style="display: flex; justify-content: center; padding: 10 0 40 0; align-items: center; font-size: 30;">
+<div class="Empresas_colaboradoras" style="display: flex; justify-content: center; padding: 10 0 40 0; align-items: center; font-size: 30;background-color: rgb(189, 187, 194);">
     <section class="bg-gray-100 py-8" id="empresas">
         <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
           <!--<h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
@@ -261,7 +282,7 @@
             <ul>
                 
                 <li><h3><u>Organizadora Principal:</u> <br>maria.adrianza@bestvalencia.org</h3></li>
-                <li><h3><u>Vicepresidente de<br>Relaciones Externas:</u><br>christian.achong@bestvalencia.org</h3></li>
+                <li><h3><u>Responsable de<br>Relaciones Corporativas:</u><br>christian.achong@best-eu.org</h3></li>
               <li><h3><u>Correo de contacto:</u><br>contacto@bestvalencia.org</h3></li>
               <li><h3 id="direccion"><u>Dirección:</u><br>Universitat Politénica de Valencia, <br> Casa del Alumno</h3></li>
             </ul>
