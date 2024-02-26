@@ -334,46 +334,6 @@ text-align: start;
   
 }
 
-@keyframes scroll {
-
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-250px * 16));
-  }
-}
-
-.Empresas_colaboradoras{
-  overflow-x: hidden;
-}
-
-
-.slider {
-  height: 100px;
-  overflow: hidden;
-  width: auto;
-  margin: 0px;
-
-}
-
-.slider .slide-track {
-  animation: scroll 16s linear infinite; /* Reduce la duración de la animación */
-  display: flex;
-  width: calc(250px * 16);
-}
-
-/* Duplica las Imagenes para crear la ilusión de continuidad */
-.slider .slide {
-  height: 100px;
-  width: 250px;
-  margin-right: 3.5%;
-}
-.slider .slide:last-child::after {
-  content: ""; /* Pseudo-elemento para duplicar las Imagenes */
-  width: 250px;
-}
-
 
 }
 
