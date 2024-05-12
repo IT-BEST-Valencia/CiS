@@ -185,6 +185,12 @@ position:static;
 }
 
 /* -------------------BODY------------------- */
+
+.prewelcome {
+  background-image: url("./Imagenes/ValenciaGente.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .welcome_section h2{
   font-size:xx-large;
 }
@@ -194,7 +200,7 @@ position:static;
 }
 
 .welcome_section {
-  background-color: #48495c;
+  background-color: #48495ccf;
   background-image: radial-gradient(#2f2f35 3px,transparent 3px);
   background-size: 40px 40px;
   width: 100%;
@@ -225,6 +231,8 @@ position:static;
 .welcome_imagenes img{
   width: 30em;
   height: 17em;
+  border-right: 4px solid  white;
+  border-bottom: 4px solid  white;
 }
 .fotos2 .join {
   margin:2%;
