@@ -229,7 +229,7 @@ position:static;
 
 .welcome_imagenes img{
   width: 40vw;
-  height: 15em;
+  height: 50vh;
   border-right: 4px solid  white;
   border-bottom: 4px solid  white;
 }
@@ -278,7 +278,7 @@ position:static;
 
 
 .more_section .more_about_valencia h1{
-  font-size: 400%;
+  font-size: 350%;
   text-shadow: 3px 3px 9px #1f1f21af;
   padding-top: 3%;
   padding-left: 3%;
