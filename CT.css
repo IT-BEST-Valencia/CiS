@@ -200,8 +200,8 @@ position:static;
 }
 
 .welcome_section {
-  background-color: #48495ccf;
-  background-image: radial-gradient(#2f2f35 3px,transparent 3px);
+  background-color: #444554c1;
+  background-image: radial-gradient(#242428 3px,transparent 3px);
   background-size: 40px 40px;
   width: 100%;
   display: flex;
@@ -222,15 +222,14 @@ position:static;
 
 .welcome_imagenes section{
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 3%;
 }
 
 .welcome_imagenes img{
-  width: 30em;
-  height: 17em;
+  width: 40vw;
+  height: 50vh;
   border-right: 4px solid  white;
   border-bottom: 4px solid  white;
 }
@@ -241,7 +240,7 @@ position:static;
 }
 
 
-/*------------MORE ABOUT IT-------------*/
+/*------------MORE ABOUT VALENCIA-------------*/
 
 .separador_verde{
   height: 5px;
@@ -274,11 +273,12 @@ position:static;
   text-align:left;
   align-items: center;
   overflow: hidden;
+
 }
 
 
 .more_section .more_about_valencia h1{
-  font-size: 400%;
+  font-size: 350%;
   text-shadow: 3px 3px 9px #1f1f21af;
   padding-top: 3%;
   padding-left: 3%;
@@ -286,6 +286,7 @@ position:static;
 
 /* 
 .more_section .texto_more {
+
   width: 55%;
 } */
 
@@ -305,6 +306,7 @@ position:static;
 .texto_val ul {
   list-style: none;
 }
+
 
 
 /*----------CORE TEAM----------*/
@@ -345,7 +347,7 @@ position:static;
   align-items: center;
 }
 .persona .foto_cargo img{
-  width: 17em;
+  width: 100%;
 }
 .CT .CT_section .persona .descripcion {
   text-align: justify;
@@ -499,51 +501,1009 @@ text-align: start;
   margin-right: 3%;
 }
 
-*, ::after, ::before {
-  box-sizing: border-box;
+}
+
+
+@media only screen and (min-width:220px) and (max-width:560px){
+
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    overflow-y:scroll;
+    
+  }
+  
+  
+  nav{
+      display: flex;
+      background-color: var(--color_barra);
+      position: fixed;
+      height: 15.5%;
+      width: 100%;
+      z-index: 10000000000;
+      justify-content: space-between;
+  }
+
+
+  #oculto{
+    display: flex;
+    background-color: var(--color_barra);
+    height: 15.5%;
+    width: 100%;
+    justify-content: space-between;
+    position:static;
+}
+
+
+  .logo_pequeño{
+    display: flex;
+      justify-content: start;
+      align-items: center;
+      width: 20%;
+      
+  }
+
+  .logo_pequeño img{
+    width: 6em;
+    margin: 0 0 15 20;    
+  }
+
+  .bloque_derecho{
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+  }
+
+  .bolas {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin-right: 20px;
+    
+  }
+  
+  .bolas img{
+    width: 20;
+    margin-left: 20px;
+  }
+  
+.lista_barra{
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  margin-right: 5%;
+
+}
+
+.lista_barra h4{
+  margin-left: 5%;
+  display: flex;
+  justify-content: end;
+  white-space: nowrap;
+  font-size: 1.8vmax;
+  align-items: center;
+  color: #FFE81F;
+}
+
+.lista_barra a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+
+.prewelcome {
+  background-image: url("./Imagenes/ValenciaGente.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   
 }
-
-@keyframes scroll {
-
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-250px * 16));
-  }
+.welcome_section h2{
+  font-size:xx-large;
 }
 
-.Empresas_colaboradoras{
+.pointless{
+  margin:1% 4% 0 4% ;
+  text-align: center;
+}
+
+.welcome_section {
+  background-color: #444554c1;
+  background-image: radial-gradient(#242428 3px,transparent 3px);
+  background-size: 40px 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome_section .welcome_imagenes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.welcome_imagenes section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.welcome_imagenes img{
+  width: 300px;
+  height: 12.5em;
+  border-right: 4px solid  white;
+  border-bottom: 4px solid  white;
+  margin-top: 5%;
+}
+.fotos2 .join {
+  margin: 4% 1% 4% 0;
+  text-align: center;
+  display: flex;
+  justify-content:end;
+}
+
+.fotos2 .join h2{
+  display: flex;
+}
+
+
+
+
+
+/*------------MORE ABOUT VALENCIA-------------*/
+
+.separador_verde{
+  height: 5px;
+  background-color: rgb(248, 30, 15);
+}
+.more_section {
+  background-image: url("./Imagenes/ValenciaStarWars.png");
+  background-size: cover;
+  width:100%;
+  height: 80%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.transparencia{
+  display: flex;
+  flex-direction: column;
+  padding: 0% 5% 0 5%;
+  background: #4e4f6694;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.more_section .more_about_valencia {
+  text-align:left;
+  align-items: center;
+
+}
+
+
+.more_section .more_about_valencia h1{
+  font-size: 200%;
+  text-shadow: 3px 3px 9px #1f1f21af;
+  padding-top: 3%;
+  padding-left: 3%;
+}
+
+/* 
+.more_section .texto_more {
+
+  width: 55%;
+} */
+
+
+.texto_more .texto_val {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  /* width:70%; */
+  height: auto;
+  border-bottom: 5px solid #ffffff;
+  border-right: 5px solid #ffffff;
+  flex-grow: 1;
+}
+
+.texto_val ul {
+  list-style: none;
+}
+
+
+
+/*----------CORE TEAM----------*/
+.CT {
+  background-image: linear-gradient(#18181d 40%, rgb(54, 51, 51));
+  display: flex;
+  flex-direction: column;
+}
+.CT .titulo_CT {
+  color: transparent;
+  -webkit-text-stroke: 1px #FAF7F6;
+  font-size: 3em;
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.CT .CT_section {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   overflow-x: hidden;
 }
-
-
-.slider {
-  height: 100px;
-  overflow: hidden;
-  width: auto;
-  margin: 0px;
-
-}
-
-.slider .slide-track {
-  animation: scroll 16s linear infinite; /* Reduce la duración de la animación */
+.CT .CT_section .persona {
+  background-color: #4e4f66;
+  background-image: linear-gradient(to right bottom, #4a4a5e, #2f2f34);
+  width: 12.5em;
+  margin-bottom: 3em;
   display: flex;
-  width: calc(250px * 16);
+  flex-direction: column;
+  text-align: center;
+  border-radius: 20px;
+  
+}
+.persona h1 {
+  padding:2%;
+}
+.persona .foto_cargo {
+  align-items: center;
+}
+.persona .foto_cargo img{
+  width: 100%;
+}
+.CT .CT_section .persona .descripcion {
+  text-align: justify;
+  padding-top: 5%;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 5%;
 }
 
-/* Duplica las Imagenes para crear la ilusión de continuidad */
-.slider .slide {
-  height: 100px;
-  width: 250px;
-  margin-right: 3.5%;
-}
-.slider .slide:last-child::after {
-  content: ""; /* Pseudo-elemento para duplicar las Imagenes */
-  width: 250px;
-}
+
+
+
+.end{
+  display: flex;
+  background-color: black;
+  padding: 20;
+  justify-content:space-around;
+  }
+  
+  
+  
+  
+  .end{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    flex-direction: column;
+  }
+  .end ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .end ul h2{
+    font-size:3vw;
+  }
+  
+  .end ul li {
+    display: flex;  
+    text-align: center; /* Centra el texto horizontalmente */
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+  }
+  
+  
+  .lista_redes{
+    display: flex;
+    justify-content:space-around;
+  }
+  
+  .contenido_abajo{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  
+  .contenido{
+    display: flex;
+    width: 30%;
+    text-align: center;
+    justify-content: center;
+    
+  }
+  
+  
+  #paginas{
+  display: flex;
+  justify-content: center;
+  text-align: start;
+  
+  }
+  
+  #paginas ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    padding: 0;
+    flex-direction: column;
+    text-align: start;
+    justify-content: start;
+    margin: 0;
+    
+  }
+    
+  
+  #paginas h3 {
+  display: flex;
+  white-space: nowrap;
+  font-size: 1.5vw;
+  flex-direction: column;
+  text-align: start;
+  
+  }
+  
+  #paginas a{
+    display: flex;
+    text-decoration-color: #FAF7F6;
+    text-align: start;
+  }
+  
+  #paginas ul li{
+    display: flex;
+    justify-content: center;
+    text-align: start;
+    margin-left: 10%;
+  }
+  
+  
+  #redes_sociales {
+    display: flex;
+    justify-content:space-around;
+    margin-top: 2.5%;
+  }
+  
+  
+  
+  #redes_sociales img{
+    filter: grayscale(100%); /* Cambia la saturación al 100% para obtener una imagen en blanco y negro */
+    display: flex;
+    height: 5vw;
+    color: #FAF7F6;
+    flex-direction: column;
+  }
+  
+  
+  .lista_redes{  
+    display: flex;
+    align-items: center;
+  }
+  
+  #contactos a{
+    display: flex;
+    text-decoration-color: #FAF7F6;
+    text-align: start;
+  }
+  
+  #contactos  {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    
+    }
+    
+    #contactos ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      width: 100%;
+      padding: 0;
+      flex-direction: column;
+      text-align: start;
+      justify-content: center;
+    }
+      
+    
+    #contactos h3 {
+    display: inline;
+    white-space: nowrap;
+    font-size: 1.5vw;
+    text-align: start;
+    text-decoration: none;
+    text-decoration-color: #FAF7F6;
+    
+    }
+    
+    #contactos ul li{
+      display: flex;
+      justify-content: center;
+      text-align: start;
+      margin-left: 10%;
+    }
+    
+  
+  #direccion{
+    display: flex;
+    text-decoration: none;
+  }
+  
+  
+  .copyright{
+    display: flex;
+    justify-content: end;
+  }
+  
+  .copyright h5{
+    color: #838085;
+    margin-right: 3%;
+    font-size: 8px;
+  }
 
 
 }
+
+
+@media only screen and (min-width:561px) and (max-width:819px){
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+
+  
+  nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color_barra);
+    width: 100%;
+    height: 20%;
+    max-height: 150;
+    position: fixed;
+    z-index: 10000000;
+  }
+  
+  #oculto{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color_barra);
+    width: 100%;
+    height: 20%;
+    max-height: 150;
+    position: static;
+  }
+
+  
+  .logo_pequeño img{
+    width: 50%;
+    max-height: 80px;
+    margin: 0 0 15 25 ;
+  
+  }
+  
+  .bloque_derecho{
+    margin-right: 30;
+  }
+  
+  .bolas {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    
+  }
+  
+  .bolas img{
+    width: 5vh;
+    margin-left: 30px;
+  }
+  
+  .lista_barra{
+    display: flex;
+
+  }
+  
+  .lista_barra h4{
+    margin-left: 30;
+    white-space: nowrap;
+    font-size: 3vh;
+    align-items: center;
+    color: #FFE81F;
+  }
+  
+  .lista_barra a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+
+
+
+
+
+  .prewelcome {
+    background-image: url("./Imagenes/ValenciaGente.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+  }
+  .welcome_section h2{
+    font-size:x-large;
+    display: flex;
+  }
+  
+  .pointless{
+    margin:1% 4% 0 4% ;
+    text-align: center;
+  }
+  
+  .welcome_section {
+    background-color: #444554c1;
+    background-image: radial-gradient(#242428 3px,transparent 3px);
+    background-size: 40px 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .welcome_section .welcome_imagenes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    flex-direction: column;
+  }
+  
+  .welcome_imagenes section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .welcome_imagenes img{
+    width: 220px;
+    height: 8em;
+    border-right: 4px solid  white;
+    border-bottom: 4px solid  white;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    
+  }
+
+
+  .fotos2{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .fotos2 .join {
+    margin: 4% 1% 4% 0;
+    text-align: center;
+    display: flex;
+    justify-content:end;
+    width: 220;
+  }
+  
+  
+  
+  
+  /*------------MORE ABOUT VALENCIA-------------*/
+  
+  .separador_verde{
+    height: 5px;
+    background-color: rgb(248, 30, 15);
+  }
+  .more_section {
+    background-image: url("./Imagenes/ValenciaStarWars.png");
+    background-size: cover;
+    width:100%;
+    height: 80%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .transparencia{
+    display: flex;
+    flex-direction: column;
+    padding: 0% 5% 0 5%;
+    background: #4e4f6694;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  
+  .more_section .more_about_valencia {
+    text-align:left;
+    align-items: center;
+  
+  }
+  
+  
+  .more_section .more_about_valencia h1{
+    font-size: 200%;
+    text-shadow: 3px 3px 9px #1f1f21af;
+    padding-top: 3%;
+    padding-left: 3%;
+  }
+  
+  /* 
+  .more_section .texto_more {
+  
+    width: 55%;
+  } */
+  
+  
+  .texto_more .texto_val {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    /* width:70%; */
+    height: auto;
+    border-bottom: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
+    flex-grow: 1;
+  }
+  
+  .texto_val ul {
+    list-style: none;
+  }
+  
+  
+  
+  /*----------CORE TEAM----------*/
+  .CT {
+    background-image: linear-gradient(#18181d 40%, rgb(54, 51, 51));
+    display: flex;
+    flex-direction: column;
+  }
+  .CT .titulo_CT {
+    color: transparent;
+    -webkit-text-stroke: 1px #FAF7F6;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+  .CT .CT_section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+  }
+  .CT .CT_section .persona {
+    background-color: #4e4f66;
+    background-image: linear-gradient(to right bottom, #4a4a5e, #2f2f34);
+    width: 15em;
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 20px;
+    
+  }
+  .persona h1 {
+    padding:2%;
+  }
+  .persona .foto_cargo {
+    align-items: center;
+  }
+  .persona .foto_cargo img{
+    width: 100%;
+  }
+  .CT .CT_section .persona .descripcion {
+    text-align: justify;
+    padding-top: 5%;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 5%;
+  }
+  
+  
+
+
+
+  .end{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    flex-direction: column;
+  }
+  .end ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .end ul h2{
+    font-size:4vw;
+  }
+  
+  .end ul li {
+    display: flex;  
+    text-align: center; /* Centra el texto horizontalmente */
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+  }
+  
+  
+  .lista_redes{
+    display: flex;
+    justify-content:space-around;
+  }
+  
+  .contenido_abajo{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  
+  .contenido{
+    display: flex;
+    width: 30%;
+    text-align: center;
+    justify-content: center;
+    
+  }
+  
+  
+  #paginas{
+  display: flex;
+  justify-content: center;
+  text-align: start;
+  
+  }
+  
+  #paginas ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    padding: 0;
+    flex-direction: column;
+    text-align: start;
+    justify-content: start;
+    margin: 0;
+    
+  }
+    
+  
+  #paginas h3 {
+  display: flex;
+  white-space: nowrap;
+  font-size: 1.75vw;
+  flex-direction: column;
+  text-align: start;
+  
+  }
+  
+  #paginas a{
+    display: flex;
+    text-decoration-color: #FAF7F6;
+    text-align: start;
+  }
+  
+  #paginas ul li{
+    display: flex;
+    justify-content: center;
+    text-align: start;
+    margin-left: 10%;
+  }
+  
+  
+  #redes_sociales {
+    display: flex;
+    justify-content:space-around;
+    margin-top: 2.5%;
+  }
+  
+  
+  
+  #redes_sociales img{
+    filter: grayscale(100%); /* Cambia la saturación al 100% para obtener una imagen en blanco y negro */
+    display: flex;
+    height: 5vw;
+    color: #FAF7F6;
+    flex-direction: column;
+  }
+  
+  
+  .lista_redes{  
+    display: flex;
+    align-items: center;
+  }
+  
+  #contactos a{
+    display: flex;
+    text-decoration-color: #FAF7F6;
+    text-align: start;
+  }
+  
+  #contactos  {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    }
+    
+    #contactos ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      width: 100%;
+      padding: 0;
+      flex-direction: column;
+      text-align: start;
+      justify-content: start;
+      padding-inline-start: 0;
+      margin-block-start: 0;
+    }
+      
+    
+    #contactos h3 {
+    display: inline;
+    white-space: nowrap;
+    font-size: 1.7vw;
+    text-align: start;
+    text-decoration: none;
+    text-decoration-color: #FAF7F6;
+    
+    }
+    
+    #contactos ul li{
+      display: flex;
+      justify-content: center;
+      text-align: start;
+    }
+    
+  
+  #direccion{
+    display: flex;
+    text-decoration: none;
+  }
+  
+  
+  .copyright{
+    display: flex;
+    justify-content: end;
+  }
+  
+  .copyright h5{
+    color: #838085;
+    margin-right: 3%;
+    font-size: 8px;
+  }
+
+  }
+
+
+
+@media only screen and (min-width: 220px) and (max-width: 560px) and (max-height: 400px) and (min-height: 200px) {
+
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    overflow-y:scroll;
+    
+  }
+
+  
+  
+  nav{
+      display: flex;
+      background-color: var(--color_barra);
+      position: fixed;
+      height: 22.5%;
+      width: 100%;
+      z-index: 10000000000;
+      min-height: 75px;
+  }
+
+
+
+  
+  .oculto{
+    display: flex;
+    background-color: var(--color_barra);
+    height: 22.5%;
+    width: 100%;
+    z-index: 10000000000;
+    min-height: 75px;
+}
+
+
+
+  .logo_pequeño{
+    display: flex;
+      justify-content: start;
+      align-items: center;
+      width: 20%;
+      
+  }
+
+  .logo_pequeño img{
+    width: 4.5em;
+    justify-self: center;
+  }
+
+  .bloque_derecho{
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+  }
+
+  .bolas {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    
+  }
+  
+  .bolas img{
+    width: 20;
+  }
+  
+.lista_barra{
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  margin-right: 5%;
+
+}
+
+.lista_barra h4{
+  margin-left: 5%;
+  display: flex;
+  justify-content: end;
+  white-space: nowrap;
+  font-size: 1.8vmax;
+  align-items: center;
+  color: #FFE81F;
+}
+
+.lista_barra a{
+  text-decoration: none;
+  color: inherit;
+}
+
+}
+
+
 
