@@ -261,7 +261,7 @@ position:static;
   display: flex;
   flex-direction: column;
   padding: 0% 5% 0 5%;
-  background: #4e4f6694;
+  background: #4e4f66be;
   width: 100%;
   height: 100%;
   display: flex;
@@ -284,11 +284,19 @@ position:static;
   padding-left: 3%;
 }
 
-/* 
-.more_section .texto_more {
+.transparencia p{
+  margin-right: 0.5%;
+}
 
-  width: 55%;
-} */
+
+.texto_val p{
+  font-size: large;
+}
+
+.texto_val li{
+  font-size: medium;
+  padding: 0.5%;
+}
 
 
 .texto_more .texto_val {
@@ -303,11 +311,9 @@ position:static;
   flex-grow: 1;
 }
 
-.texto_val ul {
-  list-style: none;
+.lista_more{
+  font-size: small;
 }
-
-
 
 /*----------CORE TEAM----------*/
 .CT {
@@ -349,6 +355,11 @@ position:static;
 .persona .foto_cargo img{
   width: 100%;
 }
+
+.descripcion p{
+  font-size: large;
+}
+
 .CT .CT_section .persona .descripcion {
   text-align: justify;
   padding-top: 5%;
@@ -683,13 +694,16 @@ text-align: start;
   display: flex;
   flex-direction: column;
   padding: 0% 5% 0 5%;
-  background: #4e4f6694;
+  background: #4e4f66be;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-evenly;
 }
 
+.transparencia p{
+  margin-right: 0.5%;
+}
 
 .more_section .more_about_valencia {
   text-align:left;
@@ -705,11 +719,17 @@ text-align: start;
   padding-left: 3%;
 }
 
-/* 
-.more_section .texto_more {
 
-  width: 55%;
-} */
+.texto_val p {
+  display: flex;
+  font-size: 15px;
+  margin-right: 2.5%;
+} 
+
+.texto_val li{
+  font-size: 10px;
+  margin-right: 2.5%;
+}
 
 
 .texto_more .texto_val {
@@ -723,9 +743,7 @@ text-align: start;
   flex-grow: 1;
 }
 
-.texto_val ul {
-  list-style: none;
-}
+
 
 
 
@@ -777,7 +795,9 @@ text-align: start;
   padding-bottom: 5%;
 }
 
-
+.descripcion p{
+  font-size: large;
+}
 
 
 .end{
@@ -1137,7 +1157,7 @@ text-align: start;
     display: flex;
     flex-direction: column;
     padding: 0% 5% 0 5%;
-    background: #4e4f6694;
+    background: #4e4f66be;
     width: 100%;
     height: 100%;
     display: flex;
@@ -1151,7 +1171,17 @@ text-align: start;
   
   }
   
+
+  .transparencia p{
+    margin-right: 2.5%;
+    font-size: 12px;
+  }
   
+.texto_val li{
+  margin-right: 2.5%;
+  font-size: 10px;
+}
+
   .more_section .more_about_valencia h1{
     font-size: 200%;
     text-shadow: 3px 3px 9px #1f1f21af;
@@ -1177,10 +1207,8 @@ text-align: start;
     flex-grow: 1;
   }
   
-  .texto_val ul {
-    list-style: none;
-  }
-  
+
+
   
   
   /*----------CORE TEAM----------*/
@@ -1231,7 +1259,9 @@ text-align: start;
     padding-bottom: 5%;
   }
   
-  
+  .descripcion p{
+    font-size: large;
+  }
 
 
 
@@ -1448,7 +1478,9 @@ text-align: start;
     min-height: 75px;
 }
 
-
+.descripcion p{
+  font-size: large;
+}
 
   .logo_pequeño{
     display: flex;
