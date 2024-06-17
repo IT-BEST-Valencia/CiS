@@ -445,7 +445,7 @@ nav{
 
 .logos_catedras{
   display: flex;
-  flex-direction: row;
+  flex-direction:row;
   align-items: center;
   justify-content: space-around;
   margin-bottom: 30px;
@@ -454,14 +454,18 @@ nav{
 
 .logos_catedras img{
   display: flex;
-  width: 250px;
+  width: 200px;
   height: auto;
 }
 
 #consum{
-
   width: 200px;
   padding-right: 50px;
+}
+
+#UPV{
+ height: 80px;
+ width: auto;
 }
 
 
@@ -1054,9 +1058,10 @@ font-size: 1.45vmax;
 
 .logos_catedras img{
   display: flex;
-  width: 250px;
+  width: 225px;
   height: auto;
   margin-bottom: 30px;
+  
 }
 
 #consum{
