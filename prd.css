@@ -125,10 +125,6 @@ nav{
   margin: 0 0 15 60;
 }
 
-.bloque_derecho{
-  margin-right: 30;
-}
-
 .bolas {
   display: flex;
   justify-content: end;
@@ -1319,7 +1315,7 @@ text-align: start;
     justify-content: space-between;
     background-color: var(--color_barra);
     width: 100%;
-    height: 20%;
+    height: 15.5%;
     max-height: 150;
     position: fixed;
     z-index: 10000000;
@@ -1332,15 +1328,15 @@ text-align: start;
     justify-content: space-between;
     background-color: var(--color_barra);
     width: 100%;
-    height: 20%;
+    height: 15.5%;
     max-height: 150;
     position: static;
   }
 
   
   .logo_pequeño img{
-    width: 50%;
-    max-height: 80px;
+    width: 80%;
+    max-height: 10vh;
     margin: 0 0 15 25 ;
   
   }
@@ -1357,20 +1353,25 @@ text-align: start;
   }
   
   .bolas img{
-    width: 5vh;
+    width: 4vh;
     margin-left: 30px;
   }
   
   .lista_barra{
     display: flex;
+    align-items: end;
+    text-align: end;
 
   }
   
   .lista_barra h4{
-    margin-left: 30;
+    margin: 20px 0 0 0;
+    display: flex;
+    margin-left: 20;
     white-space: nowrap;
-    font-size: 3vh;
-    align-items: center;
+    font-size: 1.8vh;
+    align-items: end;
+    text-align: end;
     color: #FFE81F;
   }
   
