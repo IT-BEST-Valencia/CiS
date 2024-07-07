@@ -29,8 +29,8 @@ Habrá cosas que retocar cosas a mano, pero no debería ser un problemón.
     /*Colores*/
     --color_barra: #1C1C22;
     /* --transpa_inicio: #2C2C3899; */
-    --degradado2:#234db84b;
-    --degradado1:#eb212e51;
+    --degradado2:#234db8d7;
+    --degradado1:#eb212eb0;
   
     
   
@@ -165,19 +165,49 @@ Habrá cosas que retocar cosas a mano, pero no debería ser un problemón.
 
 
 
+  .degradado{
+    display: flex;
+    background: linear-gradient(to bottom, var(--degradado2),var(--degradado1));
+    justify-content: center;
+
+}
 
 
+.recuadro{
+    display: flex;
+    background-color: #373843;
+    width: 95%;
+    margin-top: 3vh;
+    margin-bottom: 5%;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+}
 
+.cuadros2 img{
+    width: 45%;
+}
 
+.cuadros {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+}
 
+.cuadros img{
+    width: 28%;
+    border-radius: 5px;
+}
 
-
-
-
-
-
-
-
+.cuadros2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;    
+    
+}
 
 
 
@@ -479,7 +509,7 @@ Habrá cosas que retocar cosas a mano, pero no debería ser un problemón.
     display: flex;
     justify-content: end;
     white-space: nowrap;
-    font-size: 1.8vmax;
+    font-size: 1.3vmax;
     align-items: center;
     color: #FFE81F;
   }
@@ -490,6 +520,45 @@ Habrá cosas que retocar cosas a mano, pero no debería ser un problemón.
   }
   
   
+
+  .degradado{
+    display: flex;
+    background: linear-gradient(to bottom, var(--degradado2),var(--degradado1));
+    justify-content: center;
+
+}
+
+
+.recuadro{
+    display: flex;
+    background-color: #373843;
+    width: 95%;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+
+.cuadros {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.cuadros img{
+    width: 90%;
+    border-radius: 5px;
+    margin: 20 0 20 0;
+}
+
+
+
+
   
   .end{
   display: flex;
@@ -599,7 +668,42 @@ Habrá cosas que retocar cosas a mano, pero no debería ser un problemón.
   
   
   #redes_sociales img{
-    filter: grayscale(100%); /* Cambia la saturación al 100% para obtener una imagen en blanco y negro */
+    filter: grayscale(100%); /* Cambia la saturación al 100% para 
+
+    .degradado{
+      display: flex;
+      background: linear-gradient(to bottom, var(--degradado2),var(--degradado1));
+      justify-content: center;
+  
+  }
+  
+  
+  .recuadro{
+      display: flex;
+      background-color: #373843;
+      width: 95%;
+      margin-bottom: 3vh;
+      margin-top: 3vh;
+      align-self: center;
+      justify-content: center;
+      flex-direction: column;
+      border-radius: 20px;
+  }
+  
+  
+  .cuadros {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 5%;
+  }
+  
+  .cuadros img{
+      width: 90%;
+      border-radius: 5px;
+      margin: 20 0 20 0;
+  }obtener una imagen en blanco y negro */
     display: flex;
     height: 5vw;
     color: #FAF7F6;
@@ -710,7 +814,7 @@ Habrá cosas que retocar cosas a mano, pero no debería ser un problemón.
   
     
     .logo_pequeño img{
-      width: 50%;
+      width: 80%;
       max-height: 80px;
       margin: 0 0 15 25 ;
     
@@ -750,7 +854,45 @@ Habrá cosas que retocar cosas a mano, pero no debería ser un problemón.
       color: inherit;
     }
   
-  
+
+
+    .degradado{
+        display: flex;
+        background: linear-gradient(to bottom, var(--degradado2),var(--degradado1));
+        justify-content: center;
+    
+    }
+    
+    
+    .recuadro{
+        display: flex;
+        background-color: #373843;
+        width: 95%;
+        margin-bottom: 3vh;
+        margin-top: 3vh;
+        align-self: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 20px;
+    }
+    
+    
+    .cuadros {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 5%;
+    }
+    
+    .cuadros img{
+        width: 90%;
+        border-radius: 5px;
+        margin: 20 0 20 0;
+    }
+
+
+
     
     .end{
       display: flex;

@@ -184,8 +184,7 @@ nav{
 .transparencia_foto_principio{
   flex-direction: column;
   padding: 0% 5% 0 5%;
-  background: linear-gradient(to bottom, var(--degradado2),var(--degradado1
-));
+  background: linear-gradient(to bottom, var(--degradado2),var(--degradado1));
   width: 100%;
   height: 100%;
   display: flex;
